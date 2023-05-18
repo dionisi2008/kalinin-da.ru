@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () =>
     }
     else
     {
-        //alert("Help!")
+        console.log(apizapros.status);
     }
  };
     
