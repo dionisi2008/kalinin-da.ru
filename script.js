@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => 
 {
  var apizapros = new XMLHttpRequest();
- apizapros.open("POST", "https://kalinin-da.ru/api/");
- apizapros.send("sd");
+ apizapros.open("POST", "http://127.0.0.1:9090/");
+ apizapros.send("Запрос" + '\n' + "Настройки Сервера Базы" + '\n');
  apizapros.onloadend = () =>
  {
     if (apizapros.status == 200)
@@ -14,5 +14,5 @@ document.addEventListener("DOMContentLoaded", () =>
         alert("Help!")
     }
  };
-    alert("test");
+    
 });
