@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () =>
  {
     if (apizapros.status == 200)
     {
-
+        console.log(apizapros.response);
     }
     else
     {
