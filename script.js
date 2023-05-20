@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", () =>
         var result = apizapros.responseText.split('\n');
         console.log(apizapros.response);
         document.getElementById("host").innerText = result[0];
+        document.getElementById("port").innerText = result[1];
+        document.getElementById("log").innerText = result[2];
+        document.getElementById("DirectoryLog").innerText = result[3];
+        document.getElementById("SizeTable").innerText = result[4];
     }
     else
     {
