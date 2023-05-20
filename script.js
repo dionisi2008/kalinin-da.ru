@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () =>
  {
     if (apizapros.status == 200)
     {
+        var result = apizapros.responseText.split('\n');
         console.log(apizapros.response);
     }
     else
