@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () =>
     {
         var result = apizapros.responseText.split('\n');
         console.log(apizapros.response);
+        document.getElementById("host").innerText = result[0];
     }
     else
     {
