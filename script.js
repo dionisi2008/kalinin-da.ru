@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => 
 {
  var apizapros = new XMLHttpRequest();
- apizapros.open("POST", "http://127.0.0.1:9090/");
+ apizapros.open("POST", "https://127.0.0.1/api");
  apizapros.send("Запрос" + '\n' + "Настройки Сервера Базы" + '\n');
  apizapros.onloadend = () =>
  {
