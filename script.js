@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => 
 {
  var apizapros = new XMLHttpRequest();
- apizapros.open("POST", "https://127.0.0.1/api");
+ apizapros.open("POST", "https://kalinin-da.ru/api");
  apizapros.send("Запрос" + '\n' + "Настройки Сервера Базы" + '\n');
  apizapros.onloadend = () =>
  {
