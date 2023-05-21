@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(232, 232, 255);
+}
+
+#BaseForm {
+    position: absolute;
+    height: 500px;
+    width: 300px;
+    top: calc(100% / 2 - 250px);
+    left: calc(100% / 2 - 150px);
+    background-color: rgb(230, 230, 255);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 100px rgb(150, 150, 255);
+}
+
+.BaseElement
+{
+    position: absolute;
+    border-radius: 2px;
+    width: 200px;
+    height: 20px;
+    border: none;
+    left: calc(100% / 2 - 100px);
+    text-align: center;
+}
+
+#host
+{
+    top: 50px;
+}
+
+#port
+{
+    top: 100px;
+}
+
+#log
+{
+    top: 150px;
+}
+
+#DirectoryLog
+{
+    top: 200px;
+}
+
+#SizeTable
+{
+    top: 250px;
+}
+
+button
+{
+    top: 300px;
+}
