@@ -9,11 +9,11 @@ document.addEventListener("DOMContentLoaded", () =>
     {
         var result = apizapros.responseText.split('\n');
         console.log(apizapros.response);
-        document.getElementById("host").innerText = result[0];
-        document.getElementById("port").innerText = result[1];
-        document.getElementById("log").innerText = result[2];
-        document.getElementById("DirectoryLog").innerText = result[3];
-        document.getElementById("SizeTable").innerText = result[4];
+        document.getElementById("host").value = result[0];
+        document.getElementById("port").value = result[1];
+        document.getElementById("log").value = result[2];
+        document.getElementById("DirectoryLog").value = result[3];
+        document.getElementById("SizeTable").value = result[4];
     }
     else
     {
