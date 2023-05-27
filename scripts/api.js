@@ -6,6 +6,6 @@ function NewUser(Login, Password, Email)
     ClientServer.send("Пользователь" + "\r\n" + "Регистрация пользователя" + "\r\n" + Login + " " + Password + " " + Email);
     ClientServer.onloadend = () =>
     {
-        return ClientServer.responseText;
+        return ClientServer.response;
     };
 }
