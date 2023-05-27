@@ -7,7 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/style/NewUser.css">
-    <script src="script.js"></script> 
+    <script src="/scripts/api.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("Button").onclick = () =>
+                alert(NewUser("s", "sd", "sdsds"));
+        });
+
+
+
+    </script>
 </head>
 
 <body>
@@ -17,6 +26,8 @@
         </label>
         <input type="email" name="" id="Email" placeholder="Почта" class="BaseElement">
         <input type="text" name="" id="Login" placeholder="Логин" class="BaseElement">
+        <input type="password" name="" id="Password" placeholder="Пароль" class="BaseElement">
+        <button id="Button" class="BaseElement" onclick="">Регистрация</button>
     </aside>
 </body>
 

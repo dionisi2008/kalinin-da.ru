@@ -48,5 +48,12 @@ body {
 }
 
 #Login {
-    top: 120px;
+    top: 130px;
+}
+#Password {
+    top: 180px;
+}
+#Button
+{
+    top: 220px;
 }
