@@ -1,6 +1,6 @@
 var ClientServer = new XMLHttpRequest();
-xhr.responseType = "text"; // устанавливаем тип ответа как текст
-xhr.overrideMimeType("text/plain; charset=utf-8"); // явно указываем кодировку
+ClientServer.responseType = "text"; // устанавливаем тип ответа как текст
+ClientServer.overrideMimeType("text/plain; charset=utf-8"); // явно указываем кодировку
 
 function NewUser(Login, Password, Email) {
     ClientServer.open("POST", "/api")
