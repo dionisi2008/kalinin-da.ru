@@ -1,13 +1,22 @@
-var ClientServer = new XMLHttpRequest();
-ClientServer.responseType = "text"; // устанавливаем тип ответа как текст
-ClientServer.overrideMimeType("text/plain; charset=utf-8"); // явно указываем кодировку
-
 function NewUser(Login, Password, Email) {
-    ClientServer.responseType = "text"; // устанавливаем тип ответа как текст
-    ClientServer.overrideMimeType("text/plain; charset=utf-8"); // явно указываем кодировку
-    ClientServer.open("POST", "/api")
-    ClientServer.send("Пользователь" + "\r\n" + "Регистрация пользователя" + "\r\n" + Login + " " + Password + " " + Email);
-    
-        return ClientServer.responseText;
-    
+    return new Promise((resolve, reject) => {
+        const clientServer = new XMLHttpRequest();
+        clientServer.responseType = "text";
+        clientServer.overrideMimeType("text/plain; charset=utf-8");
+
+        clientServer.addEventListener("load", () => {
+            if (clientServer.status >= 200 && clientServer.status < 300) {
+                resolve(clientServer.responseText);
+            } else {
+                reject(new Error(`Ошибка выполнения запроса: ${clientServer.statusText}`));
+            }
+        });
+
+        clientServer.addEventListener("error", () => {
+            reject(new Error("Не удалось выполнить запрос"));
+        });
+
+        clientServer.open("POST", "/api");
+        clientServer.send("Пользователь" + "\r\n" + "Регистрация пользователя" + "\r\n" + Login + " " + Password + " " + Email);
+    });
 }

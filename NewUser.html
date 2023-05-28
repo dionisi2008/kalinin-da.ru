@@ -11,7 +11,13 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("Button").onclick = () =>
-                alert(NewUser("s", "sd", "sdsds"));
+                NewUser("mylogin", "mypassword", "myemail")
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(error => {
+                        console.error(error);
+                    });
         });
 
 
