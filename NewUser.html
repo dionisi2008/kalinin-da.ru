@@ -11,7 +11,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("Button").onclick = () =>
-                NewUser("mylogin", "mypassword", "myemail")
+                NewUser(document.getElementById("Login").value , document.getElementById("Password").value, document.getElementById("Email").value)
                     .then(response => {
                         console.log(response);
                     })
