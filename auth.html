@@ -17,8 +17,7 @@
         background-color: rgb(247, 247, 255);
     }
 
-    *
-    {
+    * {
         font-family: "MyFont", sans-serif;
     }
 
@@ -75,6 +74,34 @@
     }
 </style>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+       
+       document.getElementById("Button").onclick = () =>
+       {
+            
+            Test(document.getElementById("Login").value, document.getElementById("Password").value);
+
+       };
+       console.log(document.getElementById("Button").onclick );
+    });
+
+    function Test(Login, Password)
+    {
+        var RequstBody = "Пользователь\nАвторизация\n" + Login + ' ' + Password;
+        var Reuest = new XMLHttpRequest();
+        Reuest.open("POST", "/API");
+        Reuest.send(RequstBody);
+        Reuest.onloadend = () =>
+        {
+            console.log(Reuest.responseText);    
+        };
+        console.log(RequstBody);
+    }
+
+
+</script>
+
 <body>
     <aside id="BaseElemant">
         <label for="" id="LabeState" class="Labels">Авторизация:</label>
@@ -82,7 +109,7 @@
         <input type="text" name="" id="Login" class="Labels">
         <label for="" id="labelPassword" class="Labels">Пароль</label>
         <input type="password" name="" id="Password" class="Labels">
-        <button class="Labels">
+        <button class="Labels" id="Button">
             Вход
         </button>
     </aside>
