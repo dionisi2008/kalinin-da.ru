@@ -8,8 +8,18 @@
     <title>Авторизация</title>
 </head>
 <style>
+    @font-face {
+        font-family: "MyFont";
+        src: url("/font/Pangolin-Regular.ttf");
+    }
+
     body {
         background-color: rgb(247, 247, 255);
+    }
+
+    *
+    {
+        font-family: "MyFont", sans-serif;
     }
 
     #BaseElemant {
@@ -41,6 +51,7 @@
 
     #BaseElemant>#Login {
         top: 90px;
+        width: 230px;
         font-size: 20px;
         border: none;
     }
@@ -52,6 +63,7 @@
 
     #BaseElemant>#Password {
         top: 170px;
+        width: 230px;
         font-size: 20px;
         border: none;
     }
