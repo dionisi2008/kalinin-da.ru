@@ -90,7 +90,7 @@
     {
         var RequstBody = "Пользователь\nАвторизация\n" + Login + ' ' + Password;
         var Reuest = new XMLHttpRequest();
-        Reuest.open("POST", "/API");
+        Reuest.open("POST", "/api");
         Reuest.send(RequstBody);
         Reuest.onloadend = () =>
         {
