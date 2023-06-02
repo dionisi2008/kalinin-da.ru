@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+</head>
+<style>
+    body {
+        background-color: rgb(247, 247, 255);
+    }
+
+    #BaseElemant {
+
+        position: absolute;
+        height: 300px;
+        top: calc(100% / 2 - 150px);
+        width: 300px;
+        left: calc(100% / 2 - 150px);
+        border-radius: 5px;
+        background-color: rgb(247, 247, 255);
+        box-shadow: 0 0 80px rgb(106, 106, 255);
+    }
+
+    #BaseElemant>.Labels {
+        position: absolute;
+        font-size: 25px;
+        left: 40px;
+    }
+
+    #BaseElemant>#LabeState {
+        top: 20px;
+    }
+
+    #BaseElemant>#labelLogin {
+        top: 60px;
+        font-size: 20px;
+    }
+
+    #BaseElemant>#Login {
+        top: 90px;
+        font-size: 20px;
+        border: none;
+    }
+
+    #BaseElemant>#labelPassword {
+        top: 140px;
+        font-size: 20px;
+    }
+
+    #BaseElemant>#Password {
+        top: 170px;
+        font-size: 20px;
+        border: none;
+    }
+
+    #BaseElemant>button {
+        top: 210px;
+        font-size: 20px;
+        border: none;
+    }
+</style>
+
+<body>
+    <aside id="BaseElemant">
+        <label for="" id="LabeState" class="Labels">Авторизация:</label>
+        <label for="" id="labelLogin" class="Labels">Логин</label>
+        <input type="text" name="" id="Login" class="Labels">
+        <label for="" id="labelPassword" class="Labels">Пароль</label>
+        <input type="password" name="" id="Password" class="Labels">
+        <button class="Labels">
+            Вход
+        </button>
+    </aside>
+</body>
+
+</html>

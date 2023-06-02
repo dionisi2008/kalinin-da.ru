@@ -1,59 +1,82 @@
 @font-face {
-    font-family: 'MyFont';
+    font-family: "MyFont";
     src: url("/font/Pangolin-Regular.ttf");
-}
-
-body {
-    background-color: rgb(232, 232, 255);
-    font-family: 'MyFont', sans-serif;
-}
-
-#BaseForm {
-    position: absolute;
-    height: 500px;
+  }
+  
+  body {
+    background-color: #e8e8ff;
+    font-family: "MyFont", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .form {
     width: 300px;
-    top: calc(100% / 2 - 250px);
-    left: calc(100% / 2 - 150px);
-    background-color: rgb(230, 230, 255);
-    border-radius: 10px 10px 10px 10px;
-    box-shadow: 0 0 100px rgb(150, 150, 255);
-}
-
-#BaseForm>#LabelRegUser {
+    padding: 30px 20px;
+    background-color: #e6e6ff;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(150, 150, 255, 0.5);
+  }
+  
+  .form__title {
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #9696ff;
+  }
+  
+  .form__group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .form__label {
     position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #9696ff;
+    pointer-events: none;
+    transition: all 0.3s ease-out;
+  }
+  
+  .form__input {
     width: 100%;
-    text-align: center;
-    top: 20px;
-    font-weight: 800;
-    font-size: 30px;
-    color: rgb(150, 150, 255);
-}
-
-.BaseElement {
-    position: absolute;
-    border-radius: 2px;
-    width: 240px;
-    height: 20px;
+    padding: 10px;
     border: none;
-    left: calc(100% / 2 - 120px);
-    text-align: center;
-    font-family: 'MyFont', sans-serif;
-    ;
     border-radius: 5px;
-    font-size: 20px;
-}
-
-#Email {
-    top: 80px;
-}
-
-#Login {
-    top: 130px;
-}
-#Password {
-    top: 180px;
-}
-#Button
-{
-    top: 220px;
-}
+    background-color: #f1f1f1;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .form__input:focus + .form__label,
+  .form__input:not(:placeholder-shown) + .form__label {
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    color: #9696ff;
+  }
+  
+  .form__button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9696ff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  
+  .form__button:hover {
+    background-color: #7d7dff;
+  }
+  
